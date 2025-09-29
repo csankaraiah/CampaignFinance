@@ -1,5 +1,5 @@
 
-
+-- Analysis 1 : Municipal contribution data analysis
 
 --Query to get contribution data for all mayoral candidates
 select 
@@ -15,4 +15,6 @@ where cand.Office = 'Mayor'
 
 
 
- 
+-- Analysis 1.1 : Association contribution analysis
+-- Query to get association total contribution along with contact details 
+
