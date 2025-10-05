@@ -1,0 +1,29 @@
+# Requirements for Enhanced Contribution Classification System
+# Install with: pip install -r requirements.txt
+
+# Core data processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Google Cloud BigQuery
+google-cloud-bigquery>=3.0.0
+google-auth>=2.0.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+joblib>=1.2.0
+
+# Text processing and analysis
+nltk>=3.7
+textblob>=0.17.1
+
+# Optional: Advanced ML libraries
+# xgboost>=1.6.0
+# lightgbm>=3.3.0
+
+# Visualization (optional)
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Utilities
+tqdm>=4.64.0

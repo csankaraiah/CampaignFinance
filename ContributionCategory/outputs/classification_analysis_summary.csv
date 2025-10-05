@@ -1,0 +1,17 @@
+analysis_type,category,metric_name,metric_value,percentage,amount_total,amount_average,confidence_avg,description,analysis_date,analysis_timestamp
+OVERALL_SUMMARY,ALL,total_records,27159,100.0,9151736.34,389.1706217043715,0.8000000000000002,"Total campaign finance records analyzed: 27,159",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,Association,contribution_count,1789,6.6,880418.04,492.13,0.8,"Association: 1,789 contributions (6.6%), 1,219 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,BusinessOwner,contribution_count,670,2.5,261329.36,390.04,0.8,"BusinessOwner: 670 contributions (2.5%), 438 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,Developer,contribution_count,1512,5.6,700541.49,463.32,0.8,"Developer: 1,512 contributions (5.6%), 916 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,Individual,contribution_count,8761,32.3,3010389.21,343.61,0.8,"Individual: 8,761 contributions (32.3%), 4,998 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,Lawyer,contribution_count,703,2.6,263033.0,374.16,0.8,"Lawyer: 703 contributions (2.6%), 435 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,Others,contribution_count,10038,37.0,4004575.24,398.94,0.8,"Others: 10,038 contributions (37.0%), 6,336 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+CATEGORY_DISTRIBUTION,Pohlad family,contribution_count,43,0.2,31450.0,731.4,0.8,"Pohlad family: 43 contributions (0.2%), 20 unique contributors",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,Association,high_value_count,214,8.2,381655.84,1783.44,0.0,"Association high-value (>dollar1000): 214 contributions totaling dollar381,655.84",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,BusinessOwner,high_value_count,82,3.2,96128.2,1172.3,0.0,"BusinessOwner high-value (>dollar1000): 82 contributions totaling dollar96,128.20",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,Developer,high_value_count,258,9.9,300750.0,1165.7,0.0,"Developer high-value (>dollar1000): 258 contributions totaling dollar300,750.00",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,Individual,high_value_count,774,29.8,1203434.0,1554.82,0.0,"Individual high-value (>dollar1000): 774 contributions totaling dollar1,203,434.00",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,Lawyer,high_value_count,73,2.8,82850.0,1134.93,0.0,"Lawyer high-value (>dollar1000): 73 contributions totaling dollar82,850.00",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,Others,high_value_count,1179,45.4,1750029.99,1484.33,0.0,"Others high-value (>dollar1000): 1,179 contributions totaling dollar1,750,029.99",2025-10-05,2025-10-05 07:00:19.326574
+HIGH_VALUE_ANALYSIS,Pohlad family,high_value_count,18,0.7,21000.0,1166.67,0.0,"Pohlad family high-value (>dollar1000): 18 contributions totaling dollar21,000.00",2025-10-05,2025-10-05 07:00:19.326574
+ML_PERFORMANCE,MODEL_ACCURACY,overall_accuracy,96,96.0,0.0,0.0,0.96,"ML model trained on 5,432 records with 96% accuracy",2025-10-05,2025-10-05 07:00:19.326574

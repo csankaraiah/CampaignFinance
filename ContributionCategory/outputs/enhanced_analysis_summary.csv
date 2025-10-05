@@ -1,0 +1,9 @@
+analysis_type,category,metric_name,metric_value,percentage,amount_total,amount_average,confidence_avg,description,analysis_date,analysis_timestamp
+IMPROVEMENT_SUMMARY,Others_Reduction,records_reclassified,2252,19.62869345419681,0.0,0.0,1.0,"Successfully reclassified 2,252 records from Others to appropriate categories (19.6% reduction)",2025-10-05,2025-10-05 07:08:30.518093
+ENHANCED_DISTRIBUTION,Association,enhanced_count,1095,4.031812658787142,525090.87,568.8958504875407,0.95,"Enhanced Association: 1,095 contributions (4.0%) totaling $525,090.87",2025-10-05,2025-10-05 07:08:30.518093
+ENHANCED_DISTRIBUTION,BusinessOwner,enhanced_count,4725,17.39754777421849,1737554.19,415.08700191113235,0.95,"Enhanced BusinessOwner: 4,725 contributions (17.4%) totaling $1,737,554.19",2025-10-05,2025-10-05 07:08:30.518093
+ENHANCED_DISTRIBUTION,Developer,enhanced_count,1567,5.769726425862514,570165.91,450.72403952569175,0.95,"Enhanced Developer: 1,567 contributions (5.8%) totaling $570,165.91",2025-10-05,2025-10-05 07:08:30.518093
+ENHANCED_DISTRIBUTION,Individual,enhanced_count,9568,35.22957399020583,2624201.6399999997,319.7126754385965,0.95,"Enhanced Individual: 9,568 contributions (35.2%) totaling $2,624,201.64",2025-10-05,2025-10-05 07:08:30.518093
+ENHANCED_DISTRIBUTION,Lawyer,enhanced_count,983,3.6194263411760375,273266.0,353.0568475452196,0.95,"Enhanced Lawyer: 983 contributions (3.6%) totaling $273,266.00",2025-10-05,2025-10-05 07:08:30.518093
+ENHANCED_DISTRIBUTION,Others,enhanced_count,9221,33.95191280974999,3421457.73,419.2962904411765,0.95,"Enhanced Others: 9,221 contributions (34.0%) totaling $3,421,457.73",2025-10-05,2025-10-05 07:08:30.518093
+SPECIAL_HANDLING,Pohlad_Family_Merge,merged_records,58,100.0,31450.0,0.0,1.0,Successfully merged 58 Pohlad family records into BusinessOwner category as requested,2025-10-05,2025-10-05 07:08:30.518093

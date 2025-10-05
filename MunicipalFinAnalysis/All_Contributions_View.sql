@@ -21,6 +21,8 @@ WITH JacobFreyContributions AS (
       ELSE NULL
     END AS contributor_last_name,
     CAST(COALESCE(t.Employer, 'Unknown') AS STRING) AS contributor_employer,
+    CAST(t.Phone AS STRING) AS contributor_phone,
+    CAST(t.Email AS STRING) AS contributor_email,
     CAST(TRIM(REGEXP_EXTRACT(t.FulladdressFormatted, r'^(.*?)\|\|')) AS STRING) AS contributor_address,
     CAST(TRIM(REGEXP_EXTRACT(t.FulladdressFormatted, r'\|\|\s*(.*?)\s*\|\|\|')) AS STRING) AS contributor_city,
     CAST('MN' AS STRING) AS contributor_state,
@@ -49,6 +51,8 @@ Post2021Contributions AS (
     C.Contributor_First_Name AS contributor_first_name,
     C.Contributor_Last_Name AS contributor_last_name,
     CAST(C.Employer AS STRING) AS contributor_employer,
+    CAST(NULL AS STRING) AS contributor_phone,
+    CAST(NULL AS STRING) AS contributor_email,
     CAST(C.`Street_Address 1` AS STRING) AS contributor_address,
     CAST(C.Contributor_City AS STRING) AS contributor_city,
     CAST(C.Contributor_State AS STRING) AS contributor_state,
@@ -82,6 +86,8 @@ Pre2021Contributions AS (
       ELSE NULL
     END AS contributor_last_name,
     CAST(CO.ContributorsEmployer AS STRING) AS contributor_employer,
+    CAST(NULL AS STRING) AS contributor_phone,
+    CAST(NULL AS STRING) AS contributor_email,
     CAST(CO.ContributorAddress AS STRING) AS contributor_address,
     CAST(CO.City AS STRING) AS contributor_city,
     CAST(CO.State AS STRING) AS contributor_state,
@@ -112,6 +118,8 @@ SELECT
   contributor_first_name,
   contributor_last_name,
   contributor_employer,
+  contributor_phone,
+  contributor_email,
   contributor_address,
   contributor_city,
   contributor_state,
@@ -132,7 +140,13 @@ SELECT
   END AS time_period,
   
   -- Add row identifier
-  ROW_NUMBER() OVER (ORDER BY contribution_date DESC, source_type, candidate_name) AS transaction_id
+  ROW_NUMBER() OVER (ORDER BY contribution_date DESC, source_type, candidate_name) AS transaction_id,
+  
+  -- Add classification using enhanced function
+  `campaignanalytics-182101.Munidata.classify_contribution`(
+    contributor_name, 
+    contributor_employer
+  ) AS contributor_classification
 
 FROM (
   SELECT * FROM JacobFreyContributions
@@ -147,10 +161,11 @@ ORDER BY contribution_date DESC, candidate_name, contributor_name;
 -- Contains all individual contribution transactions from all three sources with standardized schema
 -- Total records: 27,169 transactions (Jacob Frey: 2,537 | Post-2021: 9,785 | Pre-2021: 14,847)
 -- Total amount: $9,155,186 (Jacob Frey: $708,524 | Post-2021: $3,876,799 | Pre-2021: $4,569,863)
--- Columns standardized: contributor info, candidate info, amounts, dates, addresses, employer info
+-- Columns standardized: contributor info, candidate info, amounts, dates, addresses, employer info, phone, email
 -- All data types explicitly cast to ensure UNION compatibility
 -- Geographic scope: All locations (Minneapolis city filter removed)
 -- Employer data: Now includes actual employer information from all three sources
+-- Contact data: Phone and email available for Jacob Frey contributions only (1,841 phone, 2,358 email records)
 
 -- Command used to create view:
 -- bq query --use_legacy_sql=false < All_Contributions_View.sql
